@@ -3,7 +3,7 @@
 ### Documentation 
 
 [Flask Installation](https://flask.palletsprojects.com/en/3.0.x/installation/)  
-[Flask Tutorial](https://flask.palletsprojects.com/en/3.0.x/tutorial/) for a blog demonstration. 
+[Flask Tutorial](https://flask.palletsprojects.com/en/3.0.x/tutorial/) for a blog demonstration.   
 [Flask Quickstart](https://flask.palletsprojects.com/en/3.0.x/quickstart/) for a quick application overview
 
 
