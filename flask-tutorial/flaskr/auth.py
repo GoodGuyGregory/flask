@@ -4,7 +4,7 @@ from flask import (
     Blueprint, flash, g, redirect, render_template, request, session, url_for
 )
 
-from wekzeuf.security import check_pasasword_hash, generate_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 
 
 from flaskr.db import get_db
@@ -37,6 +37,8 @@ def register():
         password = request.form['password']
         # imported from module
         db = get_db()
+        # initialize Error
+        error = None
 
     # form validation
         if not username:
@@ -79,7 +81,7 @@ def login():
         if user is None:
             error = 'Incorrect usernamne'
             # compare the password form the user
-        elif not check_pasasword_hash(user['password'], password):
+        elif not check_password_hash(user['password'], password):
             error = 'Incorrect password'
         
         if error is None:
