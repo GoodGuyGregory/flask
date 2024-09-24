@@ -79,7 +79,7 @@ def login():
         ).fetchone()
 
         if user is None:
-            error = 'Incorrect usernamne'
+            error = 'Incorrect username'
             # compare the password form the user
         elif not check_password_hash(user['password'], password):
             error = 'Incorrect password'
